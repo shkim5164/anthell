@@ -1,8 +1,5 @@
 class HomeController < ApplicationController
 
-  def index
-  end
-
   def book
 
   end
@@ -11,16 +8,6 @@ class HomeController < ApplicationController
     if current_user.couting.to_i >10
       redirect_to '/home/kkk', notice: '못드감 시벌'
   end
-
-
-
-
-
-
-
-
-
-
 
   def kkk
 
