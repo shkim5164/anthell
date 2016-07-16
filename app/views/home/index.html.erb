@@ -4,4 +4,24 @@
 
 
 
+
 <%=link_to "중고책", home_book_path %>
+
+<p id="notice"><%= notice %></p>
+<a href="/users/sign_out">log out</a>
+<p><%= current_user.email %></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>니가 show 페이지에 간 횟수 : <%= current_user.counting %></p>
+<a href = '/home/show'>show로 가기! </a>
