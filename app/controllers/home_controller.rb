@@ -1,10 +1,7 @@
 class HomeController < ApplicationController
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4510b96b4c71d9740bc722fe6ddae5b78d273dae
   def book
 
   end
