@@ -1,2 +1,21 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+<a href="/users/sign_out">log out</a>
+<p><%= current_user.email %></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>니가 show 페이지에 간 횟수 : <%= current_user.counting %></p>
+<a href = '/home/show'>show로 가기! </a>
