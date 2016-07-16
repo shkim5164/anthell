@@ -1,15 +1,22 @@
 class HomeController < ApplicationController
 
-  def index
-  end
+
 
   def book
 
   end
 
   def index
-    if current_user.couting.to_i >10
-      redirect_to '/home/kkk', notice: '못드감 시벌'
+
+  end
+
+  def motgam
+
+    if current_user.counting >= 17
+      redirect_to '/home/index', notice: '못드감 시벌'
+    else
+      redirect_to '/home/show'
+    end
   end
 
 
