@@ -26,7 +26,11 @@ ActiveRecord::Schema.define(version: 20160716201817) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+<<<<<<< HEAD
     t.integer  "counting"
+=======
+    t.integer  "counting",               default: 0
+>>>>>>> 4510b96b4c71d9740bc722fe6ddae5b78d273dae
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
