@@ -1,0 +1,36 @@
+<h2>현재 접속 계정 : <%= current_user.email %></h2>
+<h2>현재 접속수 : <%= current_user.counting %></h2>
+<h2>접속 중인 <%= current_user.email %>의 책 :
+
+  <%if current_user.book.nil?%>
+    <%= "등록된 책이 없습니다."%> <br>
+    <% @book.each do |b| %>
+        <%=b.id%>. 책 <%= b.title %>
+        <%= link_to "등록하기", {:controller => "home",:action => "register", :cur_user => current_user.id, :cur_book => b.id} , method: :post %> <br>
+    <% end %>
+  <% else %>
+    <%= current_user.book.title%>
+    <%= link_to "삭제", {:controller => "home",:action => "destroy", :cur_user => current_user.id, :cur_book => current_user.book.user_id} , method: :post %><br>
+  <% end %>
+</h2>
+
+<h2>접속 제한 : <%= @limit %></h2>
+ <br><br>
+
+  <% @user.each do |u| %>
+    ID : <%= u.email %> <br>
+    접속 횟수 : <%= u.counting %> <br>
+  <% end %>
+
+<br><br>
+
+  <!-- <% @book.each do |b| %>
+    <%=b.id%>번 책 : <%= b.title %>
+    <%= link_to "삭제", {:controller => "home",:action => "destroy", :cur_user => current_user.id, :cur_book => b.id} , method: :post %><br>
+
+  <% end %> -->
+
+<%= @message %> <br>
+<%= link_to 'go',home_show_path %>
+<br><br><br>
+<%= @a %>

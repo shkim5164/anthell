@@ -1,0 +1,6 @@
+<% if current_user.books.second.nil? %>
+  <%= current_user.books.first.title%> , <%= link_to "삭제", {:controller => "home",:action => "destroy", :cur_user => current_user.id, :cur_book => current_user.books.first} , method: :post %><br>
+<% else %>
+  <%= current_user.books.first.title%> , <%= link_to "삭제", {:controller => "home",:action => "destroy", :cur_user => current_user.id, :cur_book => current_user.books.first} , method: :post %><br>
+  <%= current_user.books.second.title%> , <%= link_to "삭제", {:controller => "home",:action => "destroy", :cur_user => current_user.id, :cur_book => current_user.books.second} , method: :post %><br>
+<% end %>
