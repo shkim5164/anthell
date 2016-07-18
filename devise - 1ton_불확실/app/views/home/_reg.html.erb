@@ -1,4 +1,0 @@
-<% @book.each do |b| %>
-    책 <%= b.title %>
-    <%= link_to "등록", {:controller => "home",:action => "register", :cur_user => current_user.id, :cur_book => b.id} , method: :post %> <br>
-<% end %>
