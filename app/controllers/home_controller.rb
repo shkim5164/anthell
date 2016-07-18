@@ -7,7 +7,8 @@ class HomeController < ApplicationController
   end
 
   def index
-
+    @user = User.all
+    @book = Book.all
   end
 
   def motgam
