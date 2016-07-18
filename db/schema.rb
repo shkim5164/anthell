@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160716201817) do
+ActiveRecord::Schema.define(version: 20160718023134) do
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -26,11 +34,7 @@ ActiveRecord::Schema.define(version: 20160716201817) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-<<<<<<< HEAD
-    t.integer  "counting"
-=======
     t.integer  "counting",               default: 0
->>>>>>> 4510b96b4c71d9740bc722fe6ddae5b78d273dae
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
